@@ -1,0 +1,25 @@
+/*
+ * motor.c
+ *
+ *  Created on: 28 May 2022
+ *      Author: Omar
+ */
+
+#include "motor.h"
+#include "gpio.h"
+#include "avr/io.h" /* To use the IO Ports Registers */
+#include "common_macros.h" /* To use the macros like SET_BIT */
+
+
+void DcMotor_Init(void){
+	GPIO_setupPinDirection(PORTC_ID, PIN0_ID, PIN_OUTPUT);
+	GPIO_setupPinDirection(PORTC_ID, PIN1_ID, PIN_OUTPUT);
+	GPIO_writePin(PORTC_ID, PIN0_ID, LOGIC_LOW)
+	PORTC &=~(1<<0);
+	PORTC &=~(1<<1);
+}
+
+void DcMotor_Rotate(enum DcMotor_State state, uint8 speed){
+
+
+}

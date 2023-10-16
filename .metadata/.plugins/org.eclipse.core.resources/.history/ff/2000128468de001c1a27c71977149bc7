@@ -1,0 +1,44 @@
+/*
+ * Mini_Project_3.c
+ *
+ *  Created on: 28 May 2022
+ *      Author: Omar
+ */
+#include <stdio.h>
+#include <stdlib.h>
+#include <avr/io.h>
+#include <avr/interrupt.h>
+#include <util/delay.h>
+
+#include "adc.h"
+#include "lcd.h"
+#include "lm35_sensor.h"
+#include "motor.h"
+uint8 tempValue ;
+uint8 tempValue2;
+int main(void){
+	ADC_init();
+	LCD_init();
+	DcMotor_init();
+
+	LCD_displayStringRowColumn(1, 2, "Temp = ");
+	while(1){
+
+
+		tempValue = LM35_getTemperature();
+
+			/* Display the temperature value every time at same position */
+			LCD_moveCursor(1,7);
+			if(tempValue >= 100)
+			{
+				LCD_intgerToString(tempValue);
+			}
+			else
+			{
+				LCD_intgerToString(tempValue);
+				/* In case the digital value is two or one digits print space in the next digit place */
+				LCD_displayCharacter(' ');
+			}
+	}
+
+}

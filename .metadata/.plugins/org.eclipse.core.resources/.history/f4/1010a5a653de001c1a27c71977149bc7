@@ -1,0 +1,22 @@
+ /******************************************************************************
+ *
+ * Module: ADC
+ *
+ * File Name: adc.h
+ *
+ * Description: Header file for the AVR ADC driver
+ *
+ * Author: Omar Adel
+ *
+ *******************************************************************************/
+#ifndef ADC_H_
+#define ADC_H_
+
+#include "std_types.h"
+#include <util/delay.h>
+#include "common_macros.h" /* To use the macros like SET_BIT */
+
+void ADC_init(void);
+uint16 ADC_readChannel(uint8 ch_num);
+
+#endif /* ADC_H_ */

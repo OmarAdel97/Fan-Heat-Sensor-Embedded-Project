@@ -1,0 +1,11 @@
+/*
+ * motor.c
+ *
+ *  Created on: 28 May 2022
+ *      Author: Omar
+ */
+
+#include "motor.h"
+
+#include "avr/io.h" /* To use the IO Ports Registers */
+#include "common_macros.h" /* To use the macros like SET_BIT */

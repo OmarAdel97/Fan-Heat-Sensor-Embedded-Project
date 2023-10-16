@@ -1,0 +1,74 @@
+17:12:13 **** Incremental Build of configuration Debug for project Mini_Project_3 ****
+make all 
+Building file: ../Mini_Project_3/Mini_Project_3.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Mini_Project_3/Mini_Project_3.d" -MT"Mini_Project_3/Mini_Project_3.o" -c -o "Mini_Project_3/Mini_Project_3.o" "../Mini_Project_3/Mini_Project_3.c"
+In file included from ../Mini_Project_3/Mini_Project_3.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Mini_Project_3/Mini_Project_3.c
+ 
+Building file: ../Mini_Project_3/adc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Mini_Project_3/adc.d" -MT"Mini_Project_3/adc.o" -c -o "Mini_Project_3/adc.o" "../Mini_Project_3/adc.c"
+Finished building: ../Mini_Project_3/adc.c
+ 
+Building file: ../Mini_Project_3/gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Mini_Project_3/gpio.d" -MT"Mini_Project_3/gpio.o" -c -o "Mini_Project_3/gpio.o" "../Mini_Project_3/gpio.c"
+../Mini_Project_3/gpio.c: In function 'GPIO_readPin':
+../Mini_Project_3/gpio.c:193: warning: control reaches end of non-void function
+../Mini_Project_3/gpio.c: In function 'GPIO_readPort':
+../Mini_Project_3/gpio.c:298: warning: control reaches end of non-void function
+Finished building: ../Mini_Project_3/gpio.c
+ 
+Building file: ../Mini_Project_3/lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Mini_Project_3/lcd.d" -MT"Mini_Project_3/lcd.o" -c -o "Mini_Project_3/lcd.o" "../Mini_Project_3/lcd.c"
+In file included from ../Mini_Project_3/lcd.h:16,
+                 from ../Mini_Project_3/lcd.c:14:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../Mini_Project_3/lcd.c: In function 'LCD_sendCommand':
+../Mini_Project_3/lcd.c:60: warning: unused variable 'lcd_port_value'
+../Mini_Project_3/lcd.c: In function 'LCD_displayCharacter':
+../Mini_Project_3/lcd.c:109: warning: unused variable 'lcd_port_value'
+../Mini_Project_3/lcd.c: In function 'LCD_intgerToString':
+../Mini_Project_3/lcd.c:202: warning: implicit declaration of function 'itoa'
+Finished building: ../Mini_Project_3/lcd.c
+ 
+Building file: ../Mini_Project_3/lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Mini_Project_3/lm35_sensor.d" -MT"Mini_Project_3/lm35_sensor.o" -c -o "Mini_Project_3/lm35_sensor.o" "../Mini_Project_3/lm35_sensor.c"
+Finished building: ../Mini_Project_3/lm35_sensor.c
+ 
+Building file: ../Mini_Project_3/motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Mini_Project_3/motor.d" -MT"Mini_Project_3/motor.o" -c -o "Mini_Project_3/motor.o" "../Mini_Project_3/motor.c"
+Finished building: ../Mini_Project_3/motor.c
+ 
+Building target: Mini_Project_3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Mini_Project_3.map -mmcu=atmega16 -o "Mini_Project_3.elf"  ./Mini_Project_3/Mini_Project_3.o ./Mini_Project_3/adc.o ./Mini_Project_3/gpio.o ./Mini_Project_3/lcd.o ./Mini_Project_3/lm35_sensor.o ./Mini_Project_3/motor.o   
+Finished building target: Mini_Project_3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Mini_Project_3.elf  >"Mini_Project_3.lss"
+Finished building: Mini_Project_3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Mini_Project_3.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9330 bytes (56.9% Full)
+(.text + .data + .bootloader)
+
+Data:        298 bytes (29.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+17:12:15 Build Finished. 0 errors, 7 warnings. (took 2s.45ms)
+
